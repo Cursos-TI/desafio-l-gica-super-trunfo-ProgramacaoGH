@@ -2,82 +2,86 @@
 
 int main(){
     // informaçoes necessarias para as cartas do jogo.
-    int carta = 1;
+    int carta1 = 1;
     int carta2 = 2;
-    char estado[50];
-    char codigo;
-    char cidade[8];
-    int populacao;
-    float area;
-    float pib;
-    int pontoTuristico;
+    char estado1[50];
+    char estado2[50];
+    char codigo1;
+    char codigo2;
+    char cidade1[8];
+    char cidade2[8]
+    int populacao1;
+    int populacao2;
+    float area1;
+    float area2;
+    float pib1;
+    float pib2;
+    int pontoTuristico1;
+    int pontoTuristico2;
+
     //pedindo as informaçoes ao jogador 1 para imprimir o resultado na tela.
     printf("Digite o Estado 1: \n");
-    scanf("%s", &estado);
+    scanf("%s", &estado1);
 
     printf("Digite o Código 1: \n");
-    scanf("%i", &codigo);
+    scanf("%i", &codigo1);
 
     printf("Digite a Cidade 1: \n");
-    scanf("%s", &cidade);
+    scanf("%s", &cidade1);
 
     printf("Digite a População 1: \n");
-    scanf("%d", &populacao);
+    scanf("%d", &populacao1);
 
     printf("Digite a Área 1: \n");
-    scanf("%f", &area);
+    scanf("%f", &area1);
 
     printf("Digite o PIB 1: \n");
-    scanf("%d", &pib);
+    scanf("%d", &pib1);
 
     printf("Quantidade de Ponto Turisticos 1: \n");
-    scanf("%d", &pontoTuristico);
+    scanf("%d", &pontoTuristico1);
+
     // imprimindo dados da carta do primeiro jogador na tela.
-    printf("Carta: %i\n",carta);
-
-    printf("Estado: %s\n", estado);
-    printf("Código: %i\n", codigo);
-    printf("Cidade: %s\n", cidade);
-    printf("População: %d\n", populacao);
-    printf("Área: %f\n", area);
-    printf("PIB: %d\n", pib);
-    printf("Quantida de Ponto Turistico: %d\n", pontoTuristico);
-
-
+    printf("Carta: %i\n", carta1);
+    printf("Estado: %s\n", estado1);
+    printf("Código: %i\n", codigo1);
+    printf("Cidade: %s\n", cidade1);
+    printf("População: %d\n", populacao1);
+    printf("Área: %f\n", area1);
+    printf("PIB: %d\n", pib1);
+    printf("Quantida de Ponto Turistico: %d\n", pontoTuristico1);
 
     // pedindo as informaçoes ao jogador 2 para imprimir na tela.
     printf("Digite o Estado 2: \n");
-    scanf("%s", &estado);
+    scanf("%s", &estado2);
 
     printf("Digite o Código 2: \n");
-    scanf("%i", &codigo);
+    scanf("%i", &codigo2);
 
     printf("Digite a Cidade 2: \n");
-    scanf("%s", &cidade);
+    scanf("%s", &cidade2);
 
     printf("Digite a População 2: \n");
-    scanf("%d", &populacao);
+    scanf("%d", &populacao2);
 
     printf("Digite a Área 2: \n");
-    scanf("%f", &area);
+    scanf("%f", &area2);
 
     printf("Digite o PIB 2: \n");
-    scanf("%d", &pib);
+    scanf("%d", &pib2);
 
     printf("Quantidade de Ponto Turisticos 2: \n");
-    scanf("%d", &pontoTuristico);
+    scanf("%d", &pontoTuristico2);
+
     // imprimindo dados da carta do jogador 2 na tela.
-    printf("Carta2: %i\n",carta2);
-
-    printf("Estado: %s\n", estado);
-    printf("Código: %i\n", codigo);
-    printf("Cidade: %s\n", cidade);
-    printf("População: %d\n", populacao);
-    printf("Área: %f\n", area);
-    printf("PIB: %d\n", pib);
-    printf("Quantida de Ponto Turistico: %d\n", pontoTuristico);
-
-
+    printf("Carta2: %i\n", carta2);
+    printf("Estado: %s\n", estado2);
+    printf("Código: %i\n", codigo2);
+    printf("Cidade: %s\n", cidade2);
+    printf("População: %d\n", populacao2);
+    printf("Área: %f\n", area2);
+    printf("PIB: %d\n", pib2);
+    printf("Quantida de Ponto Turistico: %d\n", pontoTuristico2);
 
     return 0;
 } 
