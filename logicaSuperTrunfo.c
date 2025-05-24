@@ -1,125 +1,90 @@
 #include <stdio.h>
 
-int main(){
-    // informaçoes necessarias para as cartas do jogo.
-    int carta1= 1;
-    int carta2 = 2;
-    char estado[50];
-    char codigo;
-    char cidade[8];
-    int populacao;
-    float area;
-    float pib;
-    int pontoTuristico;
-    double densidadePopulacional, pibPercapita;
+int main() {
+    // Variáveis para a Carta 1
+    char estado1[50], cidade1[50];
+    int codigo1, populacao1, pontosTuristicos1;
+    float area1, pib1;
 
-    //pedindo as informaçoes ao jogador 1 para imprimir o resultado na tela.
+    // Variáveis para a Carta 2
+    char estado2[50], cidade2[50];
+    int codigo2, populacao2, pontosTuristicos2;
+    float area2, pib2;
+
+    // Inputs da Carta 1
     printf("Digite o Estado 1: \n");
-    scanf("%s", &estado);
-
+    scanf("%s", estado1);
     printf("Digite o Código 1: \n");
-    scanf("%i", &codigo);
-
+    scanf("%d", &codigo1);
     printf("Digite a Cidade 1: \n");
-    scanf("%s", &cidade);
-
+    scanf("%s", cidade1);
     printf("Digite a População 1: \n");
-    scanf("%d", &populacao);
-
+    scanf("%d", &populacao1);
     printf("Digite a Área 1: \n");
-    scanf("%f", &area);
-
+    scanf("%f", &area1);
     printf("Digite o PIB 1: \n");
-    scanf("%d", &pib);
+    scanf("%f", &pib1);
+    printf("Quantidade de Pontos Turísticos 1: \n");
+    scanf("%d", &pontosTuristicos1);
 
-    printf("Quantidade de Ponto Turisticos 1: \n");
-    scanf("%d", &pontoTuristico);
-
-    // imprimindo dados da carta do primeiro jogador na tela.
-    printf("Carta1: %i\n", carta1);
-    printf("Estado: %s\n", estado);
-    printf("Código: %i\n", codigo);
-    printf("Cidade: %s\n", cidade);
-    printf("População: %d\n", populacao);
-    printf("Área: %f\n", area);
-    printf("PIB: %d\n", pib);
-    printf("Quantida de Ponto Turistico: %d\n", pontoTuristico);
-
-    // pedindo as informaçoes ao jogador 2 para imprimir na tela.
-    printf("Digite o Estado 2: \n");
-    scanf("%s", &estado);
-
+    // Inputs da Carta 2
+    printf("\nDigite o Estado 2: \n");
+    scanf("%s", estado2);
     printf("Digite o Código 2: \n");
-    scanf("%i", &codigo);
-
+    scanf("%d", &codigo2);
     printf("Digite a Cidade 2: \n");
-    scanf("%s", &cidade);
-
+    scanf("%s", cidade2);
     printf("Digite a População 2: \n");
-    scanf("%d", &populacao);
-
+    scanf("%d", &populacao2);
     printf("Digite a Área 2: \n");
-    scanf("%f", &area);
-
+    scanf("%f", &area2);
     printf("Digite o PIB 2: \n");
-    scanf("%d", &pib);
+    scanf("%f", &pib2);
+    printf("Quantidade de Pontos Turísticos 2: \n");
+    scanf("%d", &pontosTuristicos2);
 
-    printf("Quantidade de Ponto Turisticos 2: \n");
-    scanf("%d", &pontoTuristico);
+    // Comparações
+    printf("\n--- Comparação ---\n");
 
-    // imprimindo dados da carta do jogador 2 na tela.
-    printf("Carta2: %i\n", carta);
-    printf("Estado: %s\n", estado);
-    printf("Código: %i\n", codigo);
-    printf("Cidade: %s\n", cidade);
-    printf("População: %d\n", populacao);
-    printf("Área: %f\n", area);
-    printf("PIB: %d\n", pib);
-    printf("Quantida de Ponto Turistico: %d\n", pontoTuristico);
+    if (populacao1 > populacao2)
+        printf("Cidade com maior população: %s\n", cidade1);
+    else if (populacao2 > populacao1)
+        printf("Cidade com maior população: %s\n", cidade2);
+    else
+        printf("Populações são iguais!\n");
 
-    return 0;
-} 
+    if (area1 > area2)
+        printf("Cidade com maior área: %s\n", cidade1);
+    else if (area2 > area1)
+        printf("Cidade com maior área: %s\n", cidade2);
+    else
+        printf("Áreas são iguais!\n");
 
-// Desafio Super Trunfo - Países
-// Tema 2 - Comparação das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de comparação de cartas de cidades. 
-// Siga os comentários para implementar cada parte do desafio.
+    if (pib1 > pib2)
+        printf("Cidade com maior PIB: %s\n", cidade1);
+    else if (pib2 > pib1)
+        printf("Cidade com maior PIB: %s\n", cidade2);
+    else
+        printf("PIBs são iguais!\n");
 
-    // Definição das variáveis para armazenar as propriedades das cidades
-    // Você pode utilizar o código do primeiro desafio
+    if (pontosTuristicos1 > pontosTuristicos2)
+        printf("Cidade com mais pontos turísticos: %s\n", cidade1);
+    else if (pontosTuristicos2 > pontosTuristicos1)
+        printf("Cidade com mais pontos turísticos: %s\n", cidade2);
+    else
+        printf("Número de pontos turísticos é igual!\n");
 
-    
-    // Cadastro das Cartas:
-    // Implemente a lógica para solicitar ao usuário que insira os dados das cidades
-    // utilizando a função scanf para capturar as entradas.
-    // utilize o código do primeiro desafio
+    // Densidade populacional e PIB per capita
+    double densidade1 = populacao1 / area1;
+    double densidade2 = populacao2 / area2;
+    double perCapita1 = pib1 / populacao1;
+    double perCapita2 = pib2 / populacao2;
 
-    // Exemplo:
-    // printf("Digite o código da cidade: ");
-    // scanf("%s", codigo);
-    // 
-    // (Repita para cada propriedade)
+    printf("\nDensidade Populacional 1: %.2f\n", densidade1);
+    printf("Densidade Populacional 2: %.2f\n", densidade2);
 
-    // Comparação de Cartas:
-    // Desenvolva a lógica de comparação entre duas cartas.
-    // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
-
-    densidadePopulacional = populacao / area;
-    pibPercapita = pib / polulacao;
-
-    // Exemplo:
-    if (populacao1 > populacao2) {
-        printf("Cidade 1 tem maior população.\n");
-    } else {
-        printf("Cidade 2 tem maior população.\n");
-     }
-
-    // Exibição dos Resultados:
-    // Após realizar as comparações, exiba os resultados para o usuário.
-    // Certifique-se de que o sistema mostre claramente qual carta venceu e com base em qual atributo.
-
-    // Exemplo:
-    printf("A cidade vencedora é: %s\n", cidadeVencedora);
+    printf("PIB Per Capita 1: %.2f\n", perCapita1);
+    printf("PIB Per Capita 2: %.2f\n", perCapita2);
 
     return 0;
 }
