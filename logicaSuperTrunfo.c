@@ -81,7 +81,7 @@ int main() {
     double perCapita2 = pib2 / populacao2;
 
     printf("\nDensidade Populacional 1: %.2f\n", densidade1);
-    printf("Densidade Populacional 2: %.2f\n", densidade2);
+    printf("Densidade Populacional 2: %.2f\n",  densidade2);
 
     printf("PIB Per Capita 1: %.2f\n", perCapita1);
     printf("PIB Per Capita 2: %.2f\n", perCapita2);
